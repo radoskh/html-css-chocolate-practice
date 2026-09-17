@@ -1,0 +1,66 @@
+.ingredients {
+  padding-top: 120px;
+}
+.ingredients-title {
+}
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.ingredients-item {
+  width: calc((100% - 32px * 3) / 4);
+
+  border-radius: 15px;
+  padding: 28px 24px;
+  position: relative;
+}
+
+.ingredients-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.ingredients-icon {
+}
+
+.ingredients-item:nth-child(2n) .ingredients-icon {
+  color: #fd9222;
+}
+
+.ingredients-item:nth-child(2n + 1) .ingredients-icon {
+  color: #fafafa;
+}
+
+.ingredients-item:nth-child(2n) {
+  background: #fff;
+  border: 1px solid #fd9222;
+}
+
+.ingredients-item:nth-child(4n + 1) {
+  background: #fd9222;
+  color: #fff;
+}
+
+.ingredients-item:nth-child(4n + 3) {
+  background: #1e1823;
+  color: #fff;
+}
+.ingredients-ill {
+  margin-bottom: 36px;
+}
+.ingredients-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+}

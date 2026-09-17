@@ -1,0 +1,54 @@
+.made {
+}
+.made-title {
+}
+.made-ill {
+}
+.made-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33333;
+
+  max-width: 350px;
+  margin-bottom: 28px;
+}
+.made-list {
+}
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.made-item {
+  display: flex;
+  gap: 8px;
+}
+
+.made-item::before {
+  content: '';
+  flex-shrink: 0;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
+}
+
+.made-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.made-left-side {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.made-right-side {
+  border-radius: 15px;
+  padding: 32px;
+  width: 516px;
+  background: #fff;
+}
