@@ -3,6 +3,9 @@
 .made-title {
 }
 .made-ill {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 .made-caption {
   font-family: 'Montserrat', sans-serif;
@@ -10,13 +13,27 @@
   font-size: 18px;
   line-height: 1.33333;
 
+  margin-bottom: 20px;
+
   max-width: 350px;
-  margin-bottom: 28px;
 }
+
+@media only screen and (min-width: 768px) {
+  .made-caption {
+    margin-bottom: 28px;
+  }
+}
+
 .made-list {
 }
 .made-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}
+
+@media only screen and (min-width: 1168px) {
+  .made-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
 .made-item {
@@ -38,17 +55,33 @@
 
 .made-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1168px) {
+  .made-wrapper {
+    flex-direction: row;
+  }
 }
 
 .made-left-side {
+  max-width: 600px;
   border-radius: 16px;
   overflow: hidden;
 }
 
 .made-right-side {
+  max-width: 600px;
+
   border-radius: 15px;
   padding: 32px;
-  width: 516px;
   background: #fff;
+}
+
+@media only screen and (min-width: 1168px) {
+  .made-right-side {
+    max-width: 516px;
+  }
 }

@@ -1,32 +1,81 @@
 .hero {
-  padding: 0 0 80px;
+  padding: 0 0 40px;
 }
+
+@media only screen and (min-width: 1168px) {
+  .hero {
+    padding: 0 0 80px;
+  }
+}
+
 .hero-wrapper {
+  padding: 390px 20px 20px;
+
   border-radius: 30px;
-  padding: 380px 40px 40px;
+
   background-color: rgba(17, 17, 17, 0.4);
   background-image:
     linear-gradient(rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.8)),
-    url(../images/hero/hero-bg_desk@2x.jpg);
+    image-set(
+      '../images/hero/hero-bg_mob.jpg' 1x,
+      '../images/hero/hero-bg_mob@2x.jpg' 2x
+    );
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+@media only screen and (min-width: 768px) {
+  .hero-wrapper {
+    padding: 600px 40px 40px;
+
+    background-image:
+      linear-gradient(rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.8)),
+      image-set(
+        '../images/hero/hero-bg_tab.jpg' 1x,
+        '../images/hero/hero-bg_tab@2x.jpg' 2x
+      );
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .hero-wrapper {
+    padding: 380px 40px 40px;
+
+    background-image:
+      linear-gradient(rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.8)),
+      image-set(
+        '../images/hero/hero-bg_desk.jpg' 1x,
+        '../images/hero/hero-bg_desk@2x.jpg' 2x
+      );
+  }
+}
+
 .hero-title {
   max-width: 484px;
   margin-bottom: 32px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 28px;
-  line-height: 1.21429;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.21;
+  }
 }
 
 .hero-controls {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 32px 14px;
+
+  flex-wrap: wrap;
 }
 
 .hero-link {
@@ -36,11 +85,17 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #fff;
-  margin-left: auto;
 
   transition: 300ms ease-out;
   transition-property: color;
 }
+
+@media only screen and (min-width: 768px) {
+  .hero-link {
+    margin-left: auto;
+  }
+}
+
 .hero-link:hover,
 .hero-link:focus {
   color: #fd9222;

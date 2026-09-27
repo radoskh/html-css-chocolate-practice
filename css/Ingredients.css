@@ -1,19 +1,57 @@
 .ingredients {
-  padding-top: 120px;
+  padding-top: 80px;
 }
+
+@media only screen and (min-width: 768px) {
+  .ingredients {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .ingredients {
+    padding-top: 120px;
+  }
+}
+
 .ingredients-title {
 }
 .ingredients-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 32px;
 }
-.ingredients-item {
-  width: calc((100% - 32px * 3) / 4);
 
+@media only screen and (min-width: 768px) {
+  .ingredients-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.ingredients-item {
   border-radius: 15px;
-  padding: 28px 24px;
+  padding: 32px 28px 28px;
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .ingredients-item {
+    width: calc((100% - 32px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .ingredients-item {
+    width: calc((100% - 32px * 3) / 4);
+    padding: 28px 24px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .ingredients-item:nth-last-child(-n + 3) {
+    display: none;
+  }
 }
 
 .ingredients-btn {
@@ -56,8 +94,22 @@
   color: #fff;
 }
 .ingredients-ill {
-  margin-bottom: 36px;
+  margin: 0 auto 16px;
 }
+
+@media only screen and (min-width: 1168px) {
+  .ingredients-ill {
+    width: 212px;
+    height: 160px;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .ingredients-ill {
+    margin: 0 auto 36px;
+  }
+}
+
 .ingredients-caption {
   font-family: 'Montserrat', sans-serif;
   font-size: inherit;
